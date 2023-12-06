@@ -1,0 +1,92 @@
+.field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+
+
+    .label {
+        min-width: 140px;
+        white-space: nowrap;
+        color: rgba(0,0,0,0.45);
+    }
+
+
+    .formItem {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    &__select {
+        width: auto !important;
+    }
+}
+
+
+
+.component {
+    position: relative;
+    padding: 16px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transition: 0.1s ease background-color;
+
+    &.selected {
+        background-color: #F9F0FF7F;
+    }
+}
+
+.form {
+    flex: 1;
+    width: 50%;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transition: 0.1s ease opacity;
+
+    .hidden {
+        visibility: hidden;
+    }
+}
+
+.schema {
+    width: auto;
+}
+
+.textarea {
+    min-height: 24px !important;
+}
+
+.changeType {
+    position: absolute;
+    bottom: 16px;
+    right: 8px;
+    z-index: 1;
+
+
+
+    .label {
+        min-width: auto;
+    }
+}
+
+:global(.ant-select-selection-item) {
+    line-height: 1.4;
+}
+

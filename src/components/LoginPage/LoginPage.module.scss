@@ -1,0 +1,70 @@
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.component {
+  display: flex;
+  height: 100vh;
+}
+
+.intro {
+  animation: enter 0.5s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  gap: 16px;
+  width: 50%;
+  background: #9254de;
+
+  &__logo {
+    height: auto;
+    width: 100%;
+    max-width: 80px;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    text-shadow: 0 0 4px rgba(255,255,255,0.4);
+    margin: 0 !important;
+    color: #fff !important;
+  }
+
+  &__suptitle {
+    text-align: center;
+    color: #fff !important;
+    margin: 0 !important;
+  }
+
+  &__link {
+    color: #fff;
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    z-index: 1;
+  }
+}
+
+.form {
+  max-width: 360px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 16px 0 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 4px rgba(0,0,0,0.04);
+
+  .enter {
+    width: 100%;
+  }
+}

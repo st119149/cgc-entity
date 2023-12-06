@@ -1,0 +1,125 @@
+@value block from "./EntityListItem/EntityListItem.module.scss";
+
+.component {
+  overflow: auto;
+  height: 100%;
+  padding: 12px 8px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.skeleton {
+  padding: 16px 8px;
+
+
+  .first {
+    width: 300px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .second {
+    width: 400px;
+  }
+
+  .third {
+    width: 400px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .fourth {
+    .skeletonItem:first-child {
+      margin-bottom: 8px;
+    }
+
+  }
+}
+
+.bottomButton {
+  position: fixed;
+  bottom: 8px;
+  right: 24px;
+  z-index: 10;
+  display: block;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.08);
+}
+
+
+@keyframes blink {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(114, 46, 209, 0.15);
+  }
+  100% {
+    background-color: transparent;
+  }
+
+}
+
+.item {
+
+  &Enter {
+    //opacity: 0;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(114, 46, 209, 0.1);
+      transition: background-color 300ms ease;
+    }
+  }
+
+  &EnterActive {
+    //opacity: 1;
+    //transition: 1s ease all, 0.1s ease opacity;
+    &:after {
+      background-color: transparent;
+      transition: background-color 1s ease;
+    }
+  }
+
+  &Exit {
+    opacity: 1;
+    position: relative;
+    max-height: 2000px;
+    transform: translateX(0%);
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+    }
+  }
+
+  &ExitActive {
+    position: relative;
+    opacity: 0;
+    max-height: 0px;
+    transform: translateX(-30%);
+    transition: 300ms ease all;
+
+    &:after {
+      background-color: rgba(255, 77, 79, 0.2);
+      transition: background-color 300ms ease;
+    }
+  }
+}
+

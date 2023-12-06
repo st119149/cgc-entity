@@ -1,0 +1,98 @@
+
+.component {
+  position: relative;
+  transition: opacity 0.1s ease;
+
+  :global(.ant-table-header) {
+    top: -12px !important;
+  }
+
+  thead th, thead td {
+    white-space: nowrap;
+    background-color: #f5f5f5 !important;
+  }
+
+  td {
+    background-color: #fafafa;
+    border-right: 1px solid rgb(240, 240, 240);
+  }
+
+  [class="ant-table-row"] {
+    background-color: red !important;
+
+    &:hover {
+      background-color: #F9F0FF7F;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    content: '';
+  }
+
+  &.disabled {
+    opacity: 0.25;
+
+    &:after {
+      display: block;
+    }
+  }
+}
+
+.field {
+  width: 100%;
+}
+
+.textarea {
+  min-height: 24px !important;
+}
+
+.checkbox {
+  [class='ant-checkbox-inner'] {
+    background-color: #fff;
+
+
+    &:after {
+      border-color: #722ed1;
+    }
+
+  }
+
+  &:hover {
+    [class='ant-checkbox-inner'] {
+      background-color: transparent !important;
+    }
+
+  }
+}
+
+.errorCell {
+  background-color: #fff1f0 !important;
+}
+
+
+
+.row {
+
+
+  &:hover .actions {
+    opacity: 0.65;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: 0;
+  transition: 0.1s ease opacity;
+}
+
+
